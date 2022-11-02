@@ -1,0 +1,33 @@
+import sqlite3 as sql
+
+boglanish = sql.connect("bro.db")
+
+malumot = boglanish.cursor()
+
+malumot.execute(""" 
+CREATE TABLE IF NOT EXISTS Odam(
+    isim TEXT,
+    famila TEXT,
+    yosh INTEGER
+)
+
+""")
+
+malumot.execute(""" 
+CREATE TABLE IF NOT EXISTS Student(
+    isim TEXT,
+    famila TEXT,
+    yosh INTEGER,
+    kurs INTEGER
+)
+""")
+
+malumot.execute(""" 
+CREATE TABLE IF NOT EXISTS Daraxt(
+    nomi TEXT,
+    qudud TEXT,
+    yosh INTEGER,
+    turi TEXT
+)
+
+""")
